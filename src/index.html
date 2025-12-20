@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EUDI Wallet</title>
     <meta name="description" content="EUDI Wallet - Secure Identity Management">
-    
+
     <!-- Styles -->
-    <link rel="stylesheet" href="/src/styles/main.css">
-    
+    <link rel="stylesheet" href="/styles/main.css">
+
     <!-- Scripts & Components -->
-    <script type="module" src="/src/app.js"></script>
-    <script type="module" src="/src/components/app-header.js"></script>
-    <script type="module" src="/src/components/app-footer.js"></script>
+    <script type="module" src="/app.js"></script>
+    <script type="module" src="/components/app-header.js"></script>
+    <script type="module" src="/components/app-footer.js"></script>
 
     <!-- PWA -->
-    <link rel="manifest" href="/public/manifest.json">
+    <link rel="manifest" href="/manifest.json">
 </head>
+
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
     <app-header></app-header>
 
     <main class="container" style="flex: 1; padding-top: var(--spacing-xl); padding-bottom: var(--spacing-xl);">
         <section style="text-align: center; margin-bottom: var(--spacing-2xl);">
-            <h1 style="background: linear-gradient(to right, var(--color-primary), var(--color-primary-hover)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3rem;">
+            <h1
+                style="background: linear-gradient(to right, var(--color-primary), var(--color-primary-hover)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 3rem;">
                 Your Identity, Simplified.
             </h1>
             <p class="text-lg" style="max-width: 600px; margin: 0 auto var(--spacing-xl);">
                 Securely store and present your verifiable credentials with the EUDI Wallet.
             </p>
             <div style="display: flex; gap: var(--spacing-md); justify-content: center;">
-                <a href="/src/pages/credentials/index.html" class="btn btn-primary">View Credentials</a>
-                <a href="/src/pages/scan.html" class="btn" style="background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text-main);">
+                <a href="/pages/credentials/index.html" class="btn btn-primary">View Credentials</a>
+                <a href="/pages/scan.html" class="btn"
+                    style="background: var(--color-surface); border: 1px solid var(--color-border); color: var(--color-text-main);">
                     Scan QR Code
                 </a>
             </div>
         </section>
 
-        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
+        <section
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-lg);">
             <div class="card">
                 <h3>Secure Storage</h3>
                 <p>Your credentials are stored securely on your device using hardware-backed encryption.</p>
@@ -54,4 +59,5 @@
 
     <app-footer></app-footer>
 </body>
+
 </html>

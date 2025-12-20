@@ -4,20 +4,13 @@ const CACHE_NAME = 'eudi-wallet-v1';
 // @ts-ignore
 const sw = self;
 
-// Only include files that ACTUALLY exist to prevent installation failure
-const PRECACHE_ASSETS = [
-    '/',
-    '/src/pages/index.html',
-    '/src/pages/credentials/index.html',
-    '/src/styles/main.css',
-    '/src/styles/variables.css',
-    '/src/styles/reset.css',
-    '/src/styles/typography.css',
-    '/src/app.js',
-    '/src/components/app-header.js',
-    '/src/components/app-footer.js',
-    '/public/manifest.json'
-];
+// vite-plugin-pwa injects the list of files here
+// @ts-expect-error
+const INJECTED_ASSETS = self.__WB_MANIFEST;
+
+// Convert the manifest list (which might be objects {url, revision}) to just URLs
+const PRECACHE_ASSETS = INJECTED_ASSETS ? INJECTED_ASSETS.map(entry => typeof entry === 'string' ? entry : entry.url) : [];
+
 
 sw.addEventListener('install', (event) => {
     // Pre-cache all app resources.
