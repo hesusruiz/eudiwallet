@@ -23,57 +23,31 @@ class AppFooter extends HTMLElement {
                     justify-content: space-around;
                     align-items: center;
                     width: 100%;
-                    padding: 4px 0;
-                }
-                /* Stack icon and text */
-                ion-button {
-                    --padding-start: 0;
-                    --padding-end: 0;
-                    height: auto;
-                    flex-direction: column;
-                }
-                ion-button::part(native) {
-                    flex-direction: column;
                     padding: 8px 0;
-                }
-                ion-icon {
-                    margin-bottom: 4px;
-                }
-                ion-label {
-                    font-size: 10px;
-                    font-weight: 500;
-                    text-transform: none;
                 }
             </style>
             <ion-footer>
                 <ion-toolbar>
                     <div class="footer-nav">
                         <ion-button fill="clear" href="/" color="${getColor('/')}">
-                            <ion-icon aria-hidden="true" size="large"></ion-icon>
+                            <ion-icon slot="icon-only" name="home-outline" size="large"></ion-icon>
                         </ion-button>
 
                         <ion-button fill="clear" href="/pages/credentials/index.html" color="${getColor('credentials')}">
-                            <ion-icon aria-hidden="true" size="large"></ion-icon>
+                            <ion-icon slot="icon-only" name="wallet-outline" size="large"></ion-icon>
                         </ion-button>
 
                         <ion-button fill="clear" href="/pages/scan.html" color="${getColor('scan')}">
-                            <ion-icon aria-hidden="true" size="large"></ion-icon>
+                            <ion-icon slot="icon-only" name="qr-code-outline" size="large"></ion-icon>
                         </ion-button>
                         
                         <ion-button fill="clear" href="/pages/settings.html" color="${getColor('settings')}">
-                            <ion-icon aria-hidden="true" size="large"></ion-icon>
+                            <ion-icon slot="icon-only" name="settings-outline" size="large"></ion-icon>
                         </ion-button>
                     </div>
                 </ion-toolbar>
             </ion-footer>
         `;
-
-        // Manually assign icons to elements to ensure they render in bundled mode
-        const icons = [homeOutline, walletOutline, qrCodeOutline, settingsOutline];
-        const iconEls = this.querySelectorAll('ion-icon');
-        iconEls.forEach((el, index) => {
-            el.icon = icons[index];
-        });
     }
 }
 customElements.define('app-footer', AppFooter);

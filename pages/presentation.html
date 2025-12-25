@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Present Credential - EUDI Wallet</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/components/app-header.js"></script>
+    <script type="module" src="/src/components/app-footer.js"></script>
+</head>
+
+<body>
+    <ion-app>
+        <app-header></app-header>
+        <ion-content class="ion-padding">
+            <div class="container">
+                <h1>Present Credential</h1>
+                <p>Select a credential to present.</p>
+                <ion-list>
+                    <ion-item>
+                        <ion-label>National ID</ion-label>
+                        <ion-button slot="end">Present</ion-button>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-content>
+        <app-footer></app-footer>
+    </ion-app>
+</body>
+
+</html>

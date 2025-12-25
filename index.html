@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUDI Wallet</title>
+    <meta name="description" content="Business Wallet - Secure Credential Management">
+
+    <!-- Styles -->
+    <link rel="icon" type="image/svg+xml" href="/src/icons/favicon.svg">
+
+    <!-- Scripts & Components -->
+    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/components/app-header.js"></script>
+    <script type="module" src="/src/components/app-footer.js"></script>
+
+
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <ion-app>
+        <app-header></app-header>
+
+        <ion-content class="ion-padding">
+            <div class="container hero-section">
+                <section>
+                    <h1 class="hero-title">
+                        Your Credentials, Simplified.
+                    </h1>
+                    <p class="hero-subtitle">
+                        Securely store and present your verifiable credentials with the EUDI Wallet.
+                    </p>
+                    <div class="action-buttons">
+                        <ion-button href="/pages/credentials/index.html">View Credentials</ion-button>
+                        <ion-button fill="outline" href="/pages/scan.html">Scan QR Code</ion-button>
+                    </div>
+                </section>
+
+                <section class="features-grid">
+                    <ion-card class="feature-card">
+                        <ion-card-header>
+                            <ion-card-title>Secure Storage</ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                            Your credentials are stored securely on your device using hardware-backed encryption.
+                        </ion-card-content>
+                    </ion-card>
+                    <ion-card class="feature-card">
+                        <ion-card-header>
+                            <ion-card-title>Privacy First</ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                            Share only what is necessary. You are in full control of your data presentation.
+                        </ion-card-content>
+                    </ion-card>
+                    <ion-card class="feature-card">
+                        <ion-card-header>
+                            <ion-card-title>Cross-Border</ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                            Recognized across the EU. Use your digital identity anywhere.
+                        </ion-card-content>
+                    </ion-card>
+                </section>
+            </div>
+        </ion-content>
+
+        <app-footer></app-footer>
+    </ion-app>
+</body>
+
+</html>

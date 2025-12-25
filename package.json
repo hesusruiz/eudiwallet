@@ -26,6 +26,7 @@
     "vite-plugin-pwa": "^1.2.0"
   },
   "dependencies": {
+    "@ionic/core": "^8.7.14",
     "alpinejs": "^3.15.3"
   }
 }

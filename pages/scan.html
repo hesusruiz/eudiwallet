@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR - EUDI Wallet</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/components/app-header.js"></script>
+    <script type="module" src="/src/components/app-footer.js"></script>
+</head>
+
+<body>
+    <ion-app>
+        <app-header></app-header>
+        <ion-content class="ion-padding" style="--background: #000;">
+            <div class="scan-container">
+                <div class="camera-frame">
+                    <!-- Placeholder for Camera View -->
+                    <ion-icon name="camera-outline" style="font-size: 64px; opacity: 0.5;"></ion-icon>
+                    <div class="camera-scanner-line">
+                    </div>
+                </div>
+                <h2>Scan QR Code</h2>
+                <p style="opacity: 0.8; max-width: 300px;">Align the QR code within the frame to scan.</p>
+                <ion-button expand="block" color="light" href="/">Cancel</ion-button>
+            </div>
+        </ion-content>
+    </ion-app>
+</body>
+
+</html>

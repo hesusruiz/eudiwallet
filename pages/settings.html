@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - EUDI Wallet</title>
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/src/components/app-header.js"></script>
+    <script type="module" src="/src/components/app-footer.js"></script>
+</head>
+
+<body>
+    <ion-app>
+        <app-header></app-header>
+        <ion-content class="ion-padding">
+            <div class="container">
+                <h1>Settings</h1>
+                <ion-list>
+                    <ion-list-header>
+                        <ion-label>Security</ion-label>
+                    </ion-list-header>
+                    <ion-item>
+                        <ion-label>Biometrics</ion-label>
+                        <ion-toggle slot="end" checked></ion-toggle>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label>Change PIN</ion-label>
+                    </ion-item>
+
+                    <ion-list-header>
+                        <ion-label>About</ion-label>
+                    </ion-list-header>
+                    <ion-item>
+                        <ion-label>Version</ion-label>
+                        <ion-note slot="end">1.0.0</ion-note>
+                    </ion-item>
+                </ion-list>
+            </div>
+        </ion-content>
+        <app-footer></app-footer>
+    </ion-app>
+</body>
+
+</html>
